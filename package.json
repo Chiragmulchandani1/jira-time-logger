@@ -14,5 +14,8 @@
     "dotenv": "^6.2.0",
     "moment": "^2.23.0",
     "prompts": "^2.0.1"
+  },
+  "bin": {
+    "log-time": "./cli.js"
   }
 }
