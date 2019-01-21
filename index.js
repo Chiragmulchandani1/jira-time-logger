@@ -18,7 +18,7 @@ const main = async () => {
     });
     console.log("Worklog has been added");
   } catch (error) {
-    console.log(error);
+    console.log("Failed Status code ", error);
   }
 };
 
