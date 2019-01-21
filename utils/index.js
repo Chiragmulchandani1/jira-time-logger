@@ -78,13 +78,12 @@ const getWorkLogPromptFields = () => {
 const getStatusPrompt = () => {
     return prompts([
         {
-            type: "multiselect",
+            type: "toggle",
             name: "STATUS",
             message: "Do you want to change the status of the given task",
-            choices: [
-                { title: "Yes", value: true },
-                { title: "No", value: false }
-            ]
+            initial: false,
+            active: "Yes",
+            inactive: "No"
         }
     ]);
 };
