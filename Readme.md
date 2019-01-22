@@ -2,11 +2,11 @@
 
 - Generate API token in JIRA. [Click here to read more](https://confluence.atlassian.com/cloud/api-tokens-938839638.html)
 
-- Install
+- Install dependencies and symlink the project folder.
 
 ```
  npm install
- npm run-link
+ npm link
 ```
 
 - Set/Reset credentials
