@@ -1,7 +1,8 @@
 #! /usr/bin/env node
-require("dotenv").config();
-const prompts = require("prompts");
 const path = require("path");
+
+require("dotenv").config({ path: path.resolve(__dirname, "./.env") });
+const prompts = require("prompts");
 const fs = require("fs");
 const opn = require("opn");
 const args = process.argv;
