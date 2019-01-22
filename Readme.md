@@ -4,11 +4,10 @@
 
 - Config ./projects.json, add your project with key as the issue prefix and its root url value.
 
-- Install dependencies and symlink the project folder.
+- Install
 
 ```
- npm install
- npm link
+ npm install jira-time-logger -g
 ```
 
 - Set/Reset credentials
