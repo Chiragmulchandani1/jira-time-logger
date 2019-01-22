@@ -6,5 +6,9 @@
   "REEL": {
     "name": "Reelo",
     "url": "https://reelo8.atlassian.net"
+  },
+  "MOD": {
+    "name": "Modulus",
+    "url": "https://solutelabs.atlassian.net"
   }
 }
