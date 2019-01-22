@@ -2,6 +2,8 @@
 
 - Generate API token in JIRA. [Click here to read more](https://confluence.atlassian.com/cloud/api-tokens-938839638.html)
 
+- Config ./projects.json, add your project with key as the issue prefix and its root url value.
+
 - Install dependencies and symlink the project folder.
 
 ```

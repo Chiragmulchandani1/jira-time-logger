@@ -1,10 +1,10 @@
 {
-    "ADD": {
-        "name": "allDayDr",
-        "url": "https://alldaydr.atlassian.net"
-    },
-    "REEL": {
-        "issuePrefix": "Reelo",
-        "url": "https://reelo8.atlassian.net"
-    }
+  "ADD": {
+    "name": "allDayDr",
+    "url": "https://alldaydr.atlassian.net"
+  },
+  "REEL": {
+    "name": "Reelo",
+    "url": "https://reelo8.atlassian.net"
+  }
 }
