@@ -1,6 +1,6 @@
 {
   "name": "jira-time-logger",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Add Worklog in jira.",
   "main": "index.js",
   "scripts": {
