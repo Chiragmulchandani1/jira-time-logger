@@ -22,6 +22,12 @@ log-time --cred
 log-time
 ```
 
+- Open projects.json to add/edit projects.
+
+```
+log-time --config
+```
+
 ### Notes
 
 - The minimum amount of logging time must be a minute, anything below that will fail.
