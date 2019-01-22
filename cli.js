@@ -1,5 +1,5 @@
 #! /usr/bin/env node
-
+require("dotenv").config();
 const prompts = require("prompts");
 const path = require("path");
 const fs = require("fs");
@@ -13,9 +13,8 @@ const {
   getWorkLogPromptFields,
   getStatusPrompt,
   spinner,
-  PROJECTS_PATH
+  projects
 } = require("./utils");
-const projects = JSON.parse(fs.readFileSync(PROJECTS_PATH));
 
 const main = async () => {
   try {
@@ -52,8 +51,6 @@ const main = async () => {
 const userFlag = args[2];
 if (userFlag && userFlag.includes("cred")) {
   require("./credentials.js");
-} else if (userFlag && userFlag.includes("env")) {
-  opn("./.env");
 } else {
   main();
 }
