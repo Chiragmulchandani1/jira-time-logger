@@ -1,14 +1,15 @@
 require("dotenv").config();
+const path = require("path");
 var os = require("os");
 const axios = require("axios");
 const prompts = require("prompts");
-const ENV_FILE_PATH = "./.env";
+const ENV_FILE_PATH = path.resolve(__dirname, "../.env");
 const moment = require("moment");
 const fs = require("fs");
 const ora = require("ora");
 const spinner = ora("Requesting JIRA");
-
-let projects = JSON.parse(fs.readFileSync("projects.json"));
+const PROJECTS_PATH = path.resolve(__dirname, "../projects.json");
+let projects = JSON.parse(fs.readFileSync(PROJECTS_PATH));
 
 const generateAuthHeader = (username, password) => {
   const AUTH_HEADER_PLAIN = `${username}:${password}`;
@@ -61,13 +62,13 @@ const getWorkLogPromptFields = () => {
       type: "text",
       name: "ISSUE_KEY",
       validate: value => issueKeyValidator(value),
-      message: `Enter Issue Key eg. REEL-2906`
+      message: `Enter Issue Key eg. REEL-2677`
     },
     {
       type: "text",
       name: "TIME_SPENT",
       validate: value => requiredValidator(value, "Enter Time spent"),
-      message: `Enter Time Spent eg. 1h, 30m, 2w(Minimum value 1m)`
+      message: `Enter Time Spent eg. 1h, 30m, 2w (Minimum value 1m)`
     },
     {
       type: "text",
@@ -131,6 +132,7 @@ module.exports = {
   getStatusPrompt,
   spinner,
   ENV_FILE_PATH,
+  PROJECTS_PATH,
   initializeAPIToken,
   initializeEmail
 };

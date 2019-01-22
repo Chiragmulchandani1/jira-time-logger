@@ -1,9 +1,9 @@
 #! /usr/bin/env node
 
 const prompts = require("prompts");
+const path = require("path");
 const fs = require("fs");
 const opn = require("opn");
-const projects = JSON.parse(fs.readFileSync("projects.json"));
 const args = process.argv;
 const {
   generateAuthHeader,
@@ -12,8 +12,10 @@ const {
   requiredValidator,
   getWorkLogPromptFields,
   getStatusPrompt,
-  spinner
+  spinner,
+  PROJECTS_PATH
 } = require("./utils");
+const projects = JSON.parse(fs.readFileSync(PROJECTS_PATH));
 
 const main = async () => {
   try {
@@ -50,6 +52,8 @@ const main = async () => {
 const userFlag = args[2];
 if (userFlag && userFlag.includes("cred")) {
   require("./credentials.js");
+} else if (userFlag && userFlag.includes("env")) {
+  opn("./.env");
 } else {
   main();
 }
