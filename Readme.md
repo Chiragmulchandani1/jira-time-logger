@@ -35,3 +35,4 @@ log-time
 ### Contributors
 
 - [Chirag Mulchandani](https://github.com/chiragsolutelabs)
+- [Nishan Bende](https://github.com/Sunny-Nishan)
